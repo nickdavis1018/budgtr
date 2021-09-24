@@ -9,6 +9,23 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="container">
+    <h1><%= budgetItem.name %></h1>
+    <input type="button" onclick="goBack()" id="back" value="BACK"></input>
+    <h3>date</h3>
+    <h5><%=budgetItem.date%></h5>
+    <h3>name</h3>
+    <h5><%=budgetItem.name%></h5>
+    <h3>from</h3>
+    <h5><%=budgetItem.from%></h5>
+    <h3>amount</h3>
+    <h5><%=budgetItem.amount%></h5>
+    <h3>tags</h3>
+    <h5><%=budgetItem.tags%></h5></div>
 </body>
+    <script>
+function goBack() {
+    window.location.assign("http://localhost:3000/budget")
+}
+</script>
 </html>

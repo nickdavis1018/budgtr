@@ -9,6 +9,14 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="container"></div>
+    <h1>Add Budget Item</h1>
+    <form action="/budget" method="POST">
+    <input type="text" name="item" placeholder="BUDGET ITEM"/><br/>
+    <input type="text" name="date" placeholder="DATE"/><br/>
+    <input type="checkbox" name="amount" placeholder="AMOUNT"/><br/>
+    <input type="checkbox" name="from" placeholder="FROM"/><br/>
+        <input type="submit" value="Create New Item"/>
+    </form>
 </body>
 </html>
