@@ -10,7 +10,7 @@
 </head>
 <body><div class="container">
         <h1>Budgtr - Main Budget</h1>
-        <input type="button" onclick="goBack()" id="back" value="BACK"></input>
+        <input type="button" onclick="newItem()" id="new" value="ADD ITEM"></input>
         <table>
         <% for(let i=0; i < budgetItems.length; i++){ %>
         <tr>
@@ -21,8 +21,7 @@
         <% } %>
         </table></div></body>
 <script>
-    
-function goBack() {
+function newItem() {
     window.location.assign("http://localhost:3000/budget/new")
 }
 </script>

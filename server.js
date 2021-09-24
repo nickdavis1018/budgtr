@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const methodOverride = require('method-override')
 const budget = require('./models/budget.js')
 
 // START MIDDLEWARE //
@@ -13,8 +14,8 @@ app.get('/budget/', (req, res) => {
   res.render("index.ejs", {budgetItems: budget});
 });
 
-app.get('budget/new', (req, res) => {
-  res.render("new.ejs")
+app.get('/budget/new', (req, res) => {
+  res.render("new.ejs", {budgetArray: budget})
 })
 
 app.get('/budget/:budgetIndex', (req, res) => {
