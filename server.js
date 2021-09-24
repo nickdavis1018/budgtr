@@ -18,6 +18,12 @@ app.get('/budget/new', (req, res) => {
   res.render("new.ejs", {budgetArray: budget})
 })
 
+app.post("/budget", (req, res) => {
+  budget.push(req.body)
+  res.redirect("/budget")
+  console.log(req.body)
+})
+
 app.get('/budget/:budgetIndex', (req, res) => {
   res.render("show.ejs", {budgetItem: budget[req.params.budgetIndex]});
 });
