@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const methodOverride = require('method-override')
 const budget = require('./models/budget.js')
+const port = 3000
 
 // START MIDDLEWARE //
 app.use(express.urlencoded({ extended: false }))
@@ -28,6 +29,6 @@ app.get('/budget/:budgetIndex', (req, res) => {
   res.render("show.ejs", {budgetItem: budget[req.params.budgetIndex]});
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('"I did not come here to make friends. I came here to Budget." - the Budgtr App, probably');
 });
