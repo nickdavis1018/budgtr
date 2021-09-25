@@ -6,11 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/normalize.css">
     <link rel="stylesheet" href="/skeleton.css">
-<title>Document</title>
+<title>Budget Index</title>
 </head>
 <body><div class="container">
         <h1>Budgtr - Main Budget</h1>
         <input type="button" onclick="newItem()" id="new" value="ADD ITEM"></input>
+        <table>
+            <tr id="balance">
+            <td id="bank-title">Bank Account</td>
+            <td id="bank-account"><%=bankAccount%></td>
+            </tr>
+            </table>
         <table>
         <% for(let i=0; i < budgetItems.length; i++){ %>
         <tr>
@@ -20,9 +26,32 @@
         </tr>
         <% } %>
         </table></div></body>
+    <style>
+
+#balance{
+    border: 2px solid black;
+}
+
+    </style>
 <script>
+let balance = document.getElementById("bank-account");
+let bankAccountBalance = Number(balance.innerHTML)
+balance.style.padding = "6px"
+
+let bankAccountTitle = document.getElementById("bank-title");
+bankAccountTitle.style.fontWeight = "bold"
+bankAccountTitle.style.padding = "6px"
+
+if(bankAccountBalance > 1000){
+    balance.style.backgroundColor = "green"
+
+}
+else if(bankAccountBalance < 0){
+    balance.style.backgroundColor = "red"
+}
+
 function newItem() {
-    window.location.assign("http://localhost:3000/budget/new")
+window.location.assign("http://localhost:3000/budget/new")
 }
 </script>
 </html>

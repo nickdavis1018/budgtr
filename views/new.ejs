@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/normalize.css">
     <link rel="stylesheet" href="/skeleton.css">
-    <title>Document</title>
+    <title>New Budget Item</title>
 </head>
 <body>
-    <div class="container"></div>
+    <div class="container">
     <h1>Add Budget Item</h1>
     <form action="/budget" method="POST">
         <input type="text" name="date" placeholder="Date"/><br/>
     <input type="text" name="name" placeholder="Item"/><br/>
-    <input type="text" name="amount" placeholder="Amount"/><br/>
+    <input type="number" name="amount" placeholder="Amount"/><br/>
     <input type="text" name="from" placeholder="From"/><br/>
         <input type="submit" value="Create New Item"/>
-    </form>
+    </form></div>
 </body>
 </html>

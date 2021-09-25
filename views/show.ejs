@@ -6,22 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/normalize.css">
     <link rel="stylesheet" href="/skeleton.css">
-    <title>Document</title>
+    <title>Budget Item</title>
 </head>
 <body>
     <div class="container">
     <h1><%= budgetItem.name %></h1>
     <input type="button" onclick="goBack()" id="back" value="BACK"></input>
-    <h3>date</h3>
-    <h5><%=budgetItem.date%></h5>
-    <h3>name</h3>
-    <h5><%=budgetItem.name%></h5>
-    <h3>from</h3>
-    <h5><%=budgetItem.from%></h5>
-    <h3>amount</h3>
-    <h5><%=budgetItem.amount%></h5>
-    <h3>tags</h3>
-    <h5><%=budgetItem.tags%></h5></div>
+    <h4>date</h4>
+    <h6><%=budgetItem.date%></h6>
+    <h4>name</h4>
+    <h6><%=budgetItem.name%></h6>
+    <h4>from</h4>
+    <h6><%=budgetItem.from%></h6>
+    <h4>amount</h4>
+    <h6><%=budgetItem.amount%></h6>
+    <h4>tags</h4>
+    <h6><%=budgetItem.tags%></h6></div>
 </body>
     <script>
 function goBack() {
