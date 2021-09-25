@@ -16,7 +16,29 @@
     <input type="text" name="name" placeholder="Item"/><br/>
     <input type="number" name="amount" placeholder="Amount"/><br/>
     <input type="text" name="from" placeholder="From"/><br/>
-        <input type="submit" value="Create New Item"/>
-    </form></div>
+    <input type="text" name="tags" placeholder="Tags"/>
+    <p id="small">Please separate multiple tags by commas</p>
+        <input type="submit" class="button" value="Create New Item"/>
+    </form>
+    <input type="button" class="button" onclick="goBack()" value="Back"/>
+</div>
 </body>
+<style>
+#small{
+    font-size: 10px;
+    position: relative;
+    bottom: 16px;
+    left: 2px;
+}
+.button{
+    position: relative;
+    bottom: 20px;
+    width: 190px;
+}
+</style>
+<script>
+    function goBack() {
+        window.location.assign("http://localhost:3000/budget")
+    }
+    </script>
 </html>

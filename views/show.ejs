@@ -12,17 +12,25 @@
     <div class="container">
     <h1><%= budgetItem.name %></h1>
     <input type="button" onclick="goBack()" id="back" value="BACK"></input>
-    <h4>date</h4>
+    <h5>date</h5>
     <h6><%=budgetItem.date%></h6>
-    <h4>name</h4>
+    <h5>name</h5>
     <h6><%=budgetItem.name%></h6>
-    <h4>from</h4>
+    <h5>from</h5>
     <h6><%=budgetItem.from%></h6>
-    <h4>amount</h4>
+    <h5>amount</h5>
     <h6><%=budgetItem.amount%></h6>
-    <h4>tags</h4>
+    <h5>tags</h5>
     <h6><%=budgetItem.tags%></h6></div>
 </body>
+<style>
+    h5{
+        font-weight: bold;
+    }
+    h6{
+        font-style: italic;
+    }
+</style>
     <script>
 function goBack() {
     window.location.assign("http://localhost:3000/budget")
