@@ -50,7 +50,6 @@ app.post("/budget", (req, res) => {
   }
   req.body.amount = Number(req.body.amount)
   req.body.tags = req.body.tags.split(',');
-  console.log(req.body.tags)
   budget.push(req.body)
   res.redirect("/budget")
 })
